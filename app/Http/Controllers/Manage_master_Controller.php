@@ -64,6 +64,38 @@ class Manage_master_Controller extends Controller
             $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
 		}
 
+		if($action_type=="meter"){
+        	// $where = array('page_type'=>$page_type);
+  			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+            
+            $tbl = "tbl_meter";
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
+		}
+
+		if($action_type=="tracking"){
+        	// $where = array('page_type'=>$page_type);
+  			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+            
+            $tbl = "tbl_tracking";
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
+		}
+
+		if($action_type=="chemist_photo"){
+        	// $where = array('page_type'=>$page_type);
+  			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+            
+            $tbl = "tbl_delivery_chemist_photo";
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
+		}
+
+		if($action_type=="firebase_token"){
+        	// $where = array('page_type'=>$page_type);
+  			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+            
+            $tbl = "tbl_firebase_token";
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
+		}
+
 		if($action_type=="check_url_api"){
 			$input = $request->all();
 
