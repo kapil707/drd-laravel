@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Profile_Management_Controller;
 use App\Http\Controllers\Manage_page_Controller;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Manage_master_Controller;
 
 
 /*
