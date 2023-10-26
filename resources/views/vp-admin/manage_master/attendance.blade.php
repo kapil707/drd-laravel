@@ -16,10 +16,16 @@
 									Sno.
 								</th>
 								<th>
-									Title
+								user_code
 								</th>
 								<th>
-									Update Time
+								user_altercode
+								</th>
+								<th>
+								token_key
+								</th>
+								<th>
+								data/time
 								</th>
 								<th>
 									Action
@@ -32,17 +38,22 @@
 						foreach ($result as $row)
 						{
 							?>
-							<tr id="row_<?= $row->id; ?>" <?php if($row->status==0){ ?> class="text-warning" <?php } ?>>
+							<tr id="row_<?= $row->id; ?>">
 								<td>
 									<?= $i++; ?>
 								</td>
 								<td>
-									<?= ($row->title); ?>
+									<?= ($row->user_code); ?>
 								</td>
 								<td>
-									<?php
-									echo ($row->updated_at);
-									?>
+									<?= ($row->user_altercode); ?>
+								</td>
+								<td>
+									<?= ($row->token_key); ?>
+								</td>
+								<td>
+									<?= ($row->date);?>
+									<?= ($row->time);?>
 								</td>
 								<td class="text-right">
 									<div class="btn-group">
