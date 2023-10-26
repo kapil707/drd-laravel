@@ -96,6 +96,7 @@ class Manage_master_Controller extends Controller
             $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
 		}
 
+		
 		if($action_type=="check_url_api"){
 			$input = $request->all();
 
