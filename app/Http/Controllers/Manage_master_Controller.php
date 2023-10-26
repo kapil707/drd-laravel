@@ -53,7 +53,7 @@ class Manage_master_Controller extends Controller
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
             
             $tbl = "tbl_attendance";
-            $data["result"] = DB::connection('mysql2')->table($tbl)->get();
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
 		}
 
 		if($action_type=="check_url_api"){
