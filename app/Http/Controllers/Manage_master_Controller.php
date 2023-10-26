@@ -48,61 +48,9 @@ class Manage_master_Controller extends Controller
 
 		$page_type = "page";
 
-		if($action_type=="add"){
-
-			$input = $request->all();
-			if(!empty($input['post_data']) && $input['post_data']=="add"){
-				$request->validate(
-					[
-						'title'=>'required'
-					]
-				);
-				/********************************* */
-				$dt = new Manage_page_Model();
-
-				$dt->page_type = $page_type;
-				$dt->status = $input['status'];
-				
-				$dt->title = $input['title'];
-				$dt->description = $input['description'];
-				$dt->excerpt = $input['excerpt'];
-				$dt->url = $input['url'];
-				$dt->save();
-				$id = $dt->id;
-
-				return redirect("vp-admin/".$page_controllers."/edit/".$id);
-			}
-		}
-
-		if($action_type=="edit"){
-			$input = $request->all();
-			if(!empty($input['post_data']) && $input['post_data']=="edit"){
-				$request->validate(
-					[
-						'title'=>'required'
-					]
-				);
-				/********************************* */
-				$dt = Manage_page_Model::find($editid);
-
-				$dt->page_type = $page_type;
-				$dt->status = $input['status'];
-
-				$dt->title = $input['title'];
-				$dt->description = $input['description'];
-				$dt->excerpt = $input['excerpt'];
-				$dt->url = $input['url'];
-				$dt->save();
-			}
-
-			/********************************* */
-			$where = array('page_type'=>$page_type,'id'=>$editid);
-			$data["result"] = Manage_page_Model::where($where)->get();
-		}
-
-		if($action_type=="view"){
+		if($action_type){
         	$where = array('page_type'=>$page_type);
-  			$data["result"] = DB::table($tbl)->where($where)->get();
+  			$data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
 		}
 
 		if($action_type=="check_url_api"){
