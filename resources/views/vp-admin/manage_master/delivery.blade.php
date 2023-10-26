@@ -16,7 +16,19 @@
 									Sno.
 								</th>
 								<th>
-									Title
+									gstvno
+								</th>
+								<th>
+									vdt
+								</th>
+								<th>
+									deliverby
+								</th>
+								<th>
+									user_altercode
+								</th>
+								<th>
+									amt
 								</th>
 								<th>
 									Update Time
@@ -32,17 +44,28 @@
 						foreach ($result as $row)
 						{
 							?>
-							<tr id="row_<?= $row->id; ?>" <?php if($row->status==0){ ?> class="text-warning" <?php } ?>>
+							<tr id="row_<?= $row->id; ?>">
 								<td>
 									<?= $i++; ?>
 								</td>
 								<td>
-									<?= ($row->title); ?>
+									<?= ($row->gstvno); ?>
 								</td>
 								<td>
-									<?php
-									echo ($row->updated_at);
-									?>
+									<?= ($row->vdt); ?>
+								</td>
+								<td>
+									<?= ($row->deliverby); ?>
+								</td>
+								<td>
+									<?= ($row->user_altercode); ?>
+								</td>
+								<td>
+									<?= ($row->amt); ?>
+								</td>
+								<td>
+									<?= ($row->date);?>
+									<?= ($row->time);?>
 								</td>
 								<td class="text-right">
 									<div class="btn-group">
