@@ -40,13 +40,6 @@
 			$menu = DB::select(DB::raw("SELECT *,tbl_permission_page.submenu FROM `tbl_permission_settings` join tbl_permission_page on tbl_permission_settings.page_type=tbl_permission_page.page_type where tbl_permission_settings.user_type='$user_type' and tbl_permission_page.status=1 order by tbl_permission_page.sorting_order asc"));
 			foreach($menu as $mymenu)
 			{
-				if(!empty($mymenu->submenu)){
-					$str_arr = explode (",",$mymenu->submenu); 
-					foreach($str_arr as $row){
-						echo $row;
-					}
-				}
-
 				$menu_url 			= $mymenu->page_type;
 				$menu_page_type 	= $menu_url;
 				$menu_add_url 		= $menu_url."/add";
@@ -69,16 +62,16 @@
 				<li
 				<?php if($Page_menu==$menu_page_type && $get_child_page=="") { ?>
 				class="active" <?php } ?>
-				<?php if($get_child_page==$menu_page_type && $get_child_page!="") { ?> class="active" <?php } ?>>
+				<?php if($get_child_page==$menu_page_type && $get_child_page!="" && !empty($mymenu->submenu)) { ?> class="active" <?php } ?>>
                     <a href="{{ URL('vp-admin/')}}/<?php echo $menu_url ?>">
-                    <?php if(base64_decode($mymenu->fafa_icon)==""){ ?>
-                    <i class="fa fa-th-large"></i>
-                    <?php } else { ?>
-                    <?= base64_decode($mymenu->fafa_icon); ?>
-                    <?php } ?>
-                    <span class="nav-label">
-						<?= $mymenu->page_title;?>
-                    </span>
+						<?php if(base64_decode($mymenu->fafa_icon)==""){ ?>
+						<i class="fa fa-th-large"></i>
+						<?php } else { ?>
+						<?= base64_decode($mymenu->fafa_icon); ?>
+						<?php } ?>
+						<span class="nav-label">
+							<?= $mymenu->page_title;?>
+						</span>
                     </a>
 					<?php if($mymenu->page_add=="1" || $mymenu->page_view=="1" || $mymenu->page_setting=="1"){ ?>
 					<ul class="nav nav-second-level collapse">
@@ -95,7 +88,21 @@
 								<li <?php if($Page_menu=="title") { ?> class="active" <?php } ?>><a href="{{ URL('vp-admin/')}}/<?php echo $menu_theme_url ?>">Theme</a></li>
 						<?php } ?>
 					</ul>
-					<?php } ?>
+					<?php } 
+					if(!empty($mymenu->submenu)){
+						?>
+						<ul class="nav nav-second-level collapse">
+						<?php
+						$str_arr = explode (",",$mymenu->submenu); 
+						foreach($str_arr as $row){
+							?>
+							<li <?php if($Page_menu=="title") { ?> class="active" <?php } ?>><a href="{{ URL('vp-admin/')}}/<?php echo $menu_add_url ?>">Add</a></li>
+							<?php
+						}
+						?>
+						</ul>
+						<?php
+					}?>
                 </li>
             <?php
 			} ?>
