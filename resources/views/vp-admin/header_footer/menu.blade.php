@@ -97,7 +97,7 @@
 						foreach($str_arr as $row){
 							?>
 							<li <?php if($Page_menu=="title") { ?> class="active" <?php } ?>>
-								<a href="{{ URL('vp-admin/')}}/<?php echo $menu_add_url ?>">
+								<a href="{{ URL('vp-admin/')}}/<?php echo $menu_url ?>/<?php echo $row ?>">
 									<?php echo $row ?>
 								</a>
 							</li>
