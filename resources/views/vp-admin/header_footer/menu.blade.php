@@ -37,7 +37,7 @@
             </li>
             <?php
 			$user_type = "super_admin";//$this->session->userdata("user_type");
-			$menu = DB::select(DB::raw("SELECT * FROM `tbl_permission_settings` join tbl_permission_page on tbl_permission_settings.page_type=tbl_permission_page.page_type where tbl_permission_settings.user_type='$user_type' and tbl_permission_settings.status=1 order by tbl_permission_page.sorting_order asc"));
+			$menu = DB::select(DB::raw("SELECT * FROM `tbl_permission_settings` join tbl_permission_page on tbl_permission_settings.page_type=tbl_permission_page.page_type where tbl_permission_settings.user_type='$user_type' and tbl_permission_page.status=1 order by tbl_permission_page.sorting_order asc"));
 			foreach($menu as $mymenu)
 			{
 				$menu_url 			= $mymenu->page_type;
