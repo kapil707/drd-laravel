@@ -96,7 +96,11 @@
 						$str_arr = explode (",",$mymenu->submenu); 
 						foreach($str_arr as $row){
 							?>
-							<li <?php if($Page_menu=="title") { ?> class="active" <?php } ?>><a href="{{ URL('vp-admin/')}}/<?php echo $menu_add_url ?>">Add</a></li>
+							<li <?php if($Page_menu=="title") { ?> class="active" <?php } ?>>
+								<a href="{{ URL('vp-admin/')}}/<?php echo $menu_add_url ?>">
+									<?php echo $row ?>
+								</a>
+							</li>
 							<?php
 						}
 						?>
