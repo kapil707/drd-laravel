@@ -48,9 +48,12 @@ class Manage_master_Controller extends Controller
 
 		$page_type = "page";
 
-		if($action_type){
-        	$where = array('page_type'=>$page_type);
-  			$data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+		if($action_type=="attendance"){
+        	// $where = array('page_type'=>$page_type);
+  			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+            
+            $tbl = "tbl_attendance";
+            $data["result"] = DB::connection('mysql2')->table($tbl)->get();
 		}
 
 		if($action_type=="check_url_api"){
