@@ -46,20 +46,22 @@
 </div>
 <script src="https://cdn.datatables.net/scroller/2.2.0/js/dataTables.scroller.min.js"></script>
 <script>
-let data = [];
-// for (let i = 0; i < 50000; i++) {
-//     data.push([i, i, i, i, i]);
-// }
+$(document).ready(function(){
+	let data = [];
+	// for (let i = 0; i < 50000; i++) {
+	//     data.push([i, i, i, i, i]);
+	// }
 
-for (let i = 0; i < 50000; i++) {
-    data.push([i, i, i, i, i]);
-}
-new DataTable('#example', {
-    data: data,
-    deferRender: true,
-    scrollCollapse: true,
-    scroller: true,
-    scrollY: 200
+	for (let i = 0; i < 50000; i++) {
+		data.push([i, i, i, i, i]);
+	}
+	new DataTable('#example', {
+		data: data,
+		deferRender: true,
+		scrollCollapse: true,
+		scroller: true,
+		scrollY: 200
+	});
 });
 var delete_rec1 = 0;
 function delete_rec(id)
