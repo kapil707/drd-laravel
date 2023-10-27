@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Manage_master_Controller extends Controller
 {
-	public function __construct()
+	public function login_check()
     {
 		if (Auth::check()) {
             //dd("User is login.");
@@ -26,6 +26,7 @@ class Manage_master_Controller extends Controller
 	var $Page_tbl   = "tbl_page";
 	public function index(Request $request,$action_type="",$editid="")
 	{
+		$this->login_check();
 		/******************session***********************/
 		$user_id = Session::get('admin_user_id');
 		$user_type = Session::get('admin_user_type');
