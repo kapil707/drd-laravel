@@ -67,7 +67,7 @@ $(document).ready(function(){
 	for (let i = 0; i < 50000; i++) {
 		data.push([i, i, i, i, i]);
 	}
-	DataTable('#example', {
+	new DataTable('#example', {
 		data: data,
 		deferRender: true,
 		scrollCollapse: true,
