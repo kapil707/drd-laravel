@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Manage_medicine_Controller extends Controller
 {
