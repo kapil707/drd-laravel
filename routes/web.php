@@ -22,6 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('logout',[AdminController::class,'logout']);
 Route::get('login',[AdminController::class,'login']);
 Route::get('admin/',[AdminController::class,'login']);
 Route::get('vp-admin/',[AdminController::class,'login']);
