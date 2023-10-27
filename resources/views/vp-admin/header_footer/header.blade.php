@@ -83,7 +83,7 @@
                             </li>
             				<?php } */ ?>
                             <li>
-                                <a href="adminlogout">
+                                <a href="{{ URL('vp-admin/')}}logout">
                                     <i class="fa fa-sign-out fa-2x" style="color:#F00"></i>
                                     <span style="font-size:20px;">Log out</span>
                                 </a>

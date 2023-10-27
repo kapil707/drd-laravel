@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get('admin/',[AdminController::class,'login']);
 Route::get('vp-admin/',[AdminController::class,'login']);
-Route::get('adminlogout/',[AdminController::class,'logout']);
+Route::get('vp-admin/logout/',[AdminController::class,'logout']);
 
 Route::POST('vp-admin/admin_submit', [AdminController::class,'admin_submit']);
 Route::get('vp-admin/dashboard', [AdminController::class,'dashboard'])->middleware('Adminauth');
