@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\Crypt;
 class AdminController extends Controller
 {
     var $Page_title = "Manage Dashbord";
-    public function logout(){
-        auth->logout();
+    public function logout(Request $request){
+        $request->session()->forget('admin_user');
+        return redirect("vp-admin/dashboard");
     }
     public function login(){
         return view('vp-admin/login/index');
