@@ -22,9 +22,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login','AdminController@login');
-Route::get('admin/','AdminController@login');
-Route::get('vp-admin/','AdminController@login');
+Route::get('login',[AdminController::class,'login']);
+Route::get('admin/',[AdminController::class,'login']);
+Route::get('vp-admin/',[AdminController::class,'login']);
 
 Route::POST('vp-admin/admin_submit', [AdminController::class,'admin_submit']);
 Route::get('vp-admin/dashboard', [AdminController::class,'dashboard']);
