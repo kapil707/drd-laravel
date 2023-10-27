@@ -84,7 +84,7 @@ class Manage_master_Controller extends Controller
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
             
-            $tbl = "tbl_delivery_chemist_photo";
+            $tbl = "tbl_chemist_photo";
             $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
 		}
 
