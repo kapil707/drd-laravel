@@ -27,23 +27,6 @@
 </div>
 
 <script>
-$(document).ready(function(){
-	let data = [];
-	// for (let i = 0; i < 50000; i++) {
-	//     data.push([i, i, i, i, i]);
-	// }
-
-	for (let i = 0; i < 50000; i++) {
-		data.push([i, i, i, i, i]);
-	}
-	DataTable('#example', {
-		data: data,
-		deferRender: true,
-		scrollCollapse: true,
-		scroller: true,
-		scrollY: 200
-	});
-});
 var delete_rec1 = 0;
 function delete_rec(id)
 {
@@ -74,3 +57,22 @@ function delete_rec(id)
 </script>
 @include('vp-admin/header_footer/footer')
 <script src="https://cdn.datatables.net/scroller/2.2.0/js/dataTables.scroller.min.js"></script>
+<script>
+$(document).ready(function(){
+	let data = [];
+	// for (let i = 0; i < 50000; i++) {
+	//     data.push([i, i, i, i, i]);
+	// }
+
+	for (let i = 0; i < 50000; i++) {
+		data.push([i, i, i, i, i]);
+	}
+	DataTable('#example', {
+		data: data,
+		deferRender: true,
+		scrollCollapse: true,
+		scroller: true,
+		scrollY: 200
+	});
+});
+</script>
