@@ -25,7 +25,7 @@
 		</div>
     </div>
 </div>
-<script src="https://cdn.datatables.net/scroller/2.2.0/js/dataTables.scroller.min.js"></script>
+
 <script>
 $(document).ready(function(){
 	let data = [];
@@ -73,3 +73,4 @@ function delete_rec(id)
 }
 </script>
 @include('vp-admin/header_footer/footer')
+<script src="https://cdn.datatables.net/scroller/2.2.0/js/dataTables.scroller.min.js"></script>
