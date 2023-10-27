@@ -95,7 +95,7 @@ $(document).ready(function(){
 		responsive: true,
 		dom: '<"html5buttons"B>lTfgitp',
 		buttons: [
-			{extend: 'copy'},
+			{ extend: 'copy'},
 			{extend: 'csv'},
 			{extend: 'excel', title: 'ExampleFile'},
 			{extend: 'pdf', title: 'ExampleFile'},
