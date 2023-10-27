@@ -22,9 +22,6 @@
 									user_altercode
 								</th>
 								<th>
-									user_altercode
-								</th>
-								<th>
 									chemist_id
 								</th>
 								<th>
