@@ -9,7 +9,7 @@
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
 				<div class="table-responsive">
-					<table class="" id="example-table">
+					<table class="table table-striped table-bordered table-hover" id="example-table">
 						<thead>
 							<tr>
 								<th>
@@ -88,7 +88,6 @@ $(document).ready(function(){
 	?>
 	$('#example-table').DataTable({
 		data: data,
-		scrollY: 500,
 		pageLength: 25,
 		responsive: true,
 		dom: '<"html5buttons"B>lTfgitp',
