@@ -177,7 +177,6 @@ $(document).ready(function(){
 $('.dual_select').bootstrapDualListbox({
 selectorMinimalHeight: 160
 });
-check_login();
 get_latitude_longitude();
 });
 </script>
