@@ -3,9 +3,17 @@
 namespace App\Http\Controllers;
 use Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Manage_master_Controller extends Controller
 {
+	public function __construct()
+    {
+        if(Auth::check()){
+			return view('dashboard');
+		}
+    }
+	
     var $Page_title = "Manage Master";
 	var $Page_name  = "manage_master";
 	var $Page_view  = "manage_master";
