@@ -16,7 +16,10 @@ class Adminlogin
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->session()->has('admin_user'))
-        return $next($request);
+        if($request->session()->has('admin_user')){
+            return $next($request);
+        }else{
+            return redirect('login');
+        }
     }
 }
