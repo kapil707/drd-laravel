@@ -9,7 +9,7 @@
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
 				<div class="table-responsive">
-				<table id="example" class="display nowrap" style="width:100%">
+				<table id="examplexxxx" class="display nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>ID</th>
@@ -67,7 +67,7 @@ $(document).ready(function(){
 	for (let i = 0; i < 50000; i++) {
 		data.push([i, i, i, i, i]);
 	}
-	new DataTable('#example', {
+	$('#examplexxxx').DataTable({
 		data: data,
 		deferRender: true,
 		scrollCollapse: true,
