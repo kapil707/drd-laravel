@@ -49,14 +49,7 @@ let data = [];
 // for (let i = 0; i < 50000; i++) {
 //     data.push([i, i, i, i, i]);
 // }
-<?php/*
-foreach ($result as $row)
-{
-	?>
-	 data.push(['<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>']);
-	<?php
-}*/
-?>
+
 for (let i = 0; i < 50000; i++) {
     data.push([i, i, i, i, i]);
 }
