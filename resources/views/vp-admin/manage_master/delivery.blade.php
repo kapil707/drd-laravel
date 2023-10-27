@@ -88,9 +88,6 @@ $(document).ready(function(){
 	?>
 	$('#example-table').DataTable({
 		data: data,
-		deferRender: true,
-		scrollCollapse: true,
-		scroller: true,
 		scrollY: 500,
 		pageLength: 25,
 		responsive: true,
