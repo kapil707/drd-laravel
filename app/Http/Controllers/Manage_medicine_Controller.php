@@ -49,11 +49,11 @@ class Manage_medicine_Controller extends Controller
 
 		$page_type = "page";
 
-		if($action_type=="item_category_row"){
+		if($action_type=="item_category"){
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
             
-            $tbl = "tbl_attendance";
+            $tbl = "tbl_item_category";
             $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
 		}
 
