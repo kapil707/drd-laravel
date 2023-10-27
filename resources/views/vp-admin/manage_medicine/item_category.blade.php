@@ -16,22 +16,7 @@
 									Sno.
 								</th>
 								<th>
-									gstvno
-								</th>
-								<th>
-									vdt
-								</th>
-								<th>
-									deliverby
-								</th>
-								<th>
-									user_altercode
-								</th>
-								<th>
-									chemist_id
-								</th>
-								<th>
-									amt
+									Name
 								</th>
 								<th>
 									Update Time
@@ -85,7 +70,7 @@ $(document).ready(function(){
 	foreach ($result as $row)
 	{
 		?>
-		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->deliverby); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->date);?> <?= ($row->time);?>']);
+		data.push(['<?= $i++; ?>', '<?= ($row->name); ?>', '<?= ($row->date); ?> <?= ($row->time);?>']);
 		<?php
 	}
 	?>
