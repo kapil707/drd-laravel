@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Crypt;
 class AdminController extends Controller
 {
     var $Page_title = "Manage Dashbord";
+    public function login(){
+        return view('vp-admin/login/index');
+    }
     public function admin_submit(Request $request){
         $request->validate([
             'username'=>'required',

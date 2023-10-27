@@ -23,17 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login', function () {
-    return view('vp-admin/login/index');
-});
+Route::get('login','AdminController@login');
+Route::get('admin/','AdminController@login');
+Route::get('vp-admin/','AdminController@login');
 
-Route::get('admin/', function () {
-    return view('vp-admin/login/index');
-});
-
-Route::get('vp-admin/', function () {
-    return view('vp-admin/login/index');
-});
 Route::POST('vp-admin/admin_submit', [AdminController::class,'admin_submit']);
 Route::get('vp-admin/dashboard', [AdminController::class,'dashboard']);
 
