@@ -57,20 +57,12 @@ class Manage_medicine_Controller extends Controller
             $data["result"] = \DB::table($tbl)->get();
 		}
 
-        if($action_type=="delivery"){
+        if($action_type=="division_category"){
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
             
-            $tbl = "tbl_delivery";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
-		}
-
-		if($action_type=="meter"){
-        	// $where = array('page_type'=>$page_type);
-  			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
-            
-            $tbl = "tbl_meter";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
+            $tbl = "tbl_division_category";
+            $data["result"] = \DB::table($tbl)->get();
 		}
 
 		if($action_type=="tracking"){
