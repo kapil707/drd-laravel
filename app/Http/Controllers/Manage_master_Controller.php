@@ -38,6 +38,12 @@ class Manage_master_Controller extends Controller
 		$data['Page_name'] = $Page_name;
 		$data['Page_menu'] = $Page_menu;
 
+		if (Auth::check()) {
+            dd("User is login.");
+        } else {
+            dd("User is not login.");
+        }
+
 		if($action_type==""){
 			return redirect("vp-admin/".$page_controllers."/view");
 		}
