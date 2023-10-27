@@ -43,6 +43,6 @@ Route::any('vp-admin/manage_page/{var1}', [Manage_page_Controller::class,'index'
 Route::any('vp-admin/manage_page/{var1}/{var2}', [Manage_page_Controller::class,'index']);
 
 /*******manage_master*************/
-Route::any('vp-admin/manage_master/',[Manage_master_Controller::class,'index']);
-Route::any('vp-admin/manage_master/{var1}', [Manage_master_Controller::class,'index']);
-Route::any('vp-admin/manage_master/{var1}/{var2}', [Manage_master_Controller::class,'index']);
+Route::any('vp-admin/manage_master/',[Manage_master_Controller::class,'index'])->middleware('auth');
+Route::any('vp-admin/manage_master/{var1}', [Manage_master_Controller::class,'index'])->middleware('auth');
+Route::any('vp-admin/manage_master/{var1}/{var2}', [Manage_master_Controller::class,'index'])->middleware('auth');
