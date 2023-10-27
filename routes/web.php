@@ -42,3 +42,8 @@ Route::any('vp-admin/manage_page/{var1}/{var2}', [Manage_page_Controller::class,
 Route::any('vp-admin/manage_master/',[Manage_master_Controller::class,'index'])->middleware('Adminauth');
 Route::any('vp-admin/manage_master/{var1}', [Manage_master_Controller::class,'index'])->middleware('Adminauth');
 Route::any('vp-admin/manage_master/{var1}/{var2}', [Manage_master_Controller::class,'index'])->middleware('Adminauth');
+
+/*******manage_medicine*************/
+Route::any('vp-admin/manage_medicine/',[Manage_medicine_Controller::class,'index'])->middleware('Adminauth');
+Route::any('vp-admin/manage_medicine/{var1}', [Manage_medicine_Controller::class,'index'])->middleware('Adminauth');
+Route::any('vp-admin/manage_medicine/{var1}/{var2}', [Manage_medicine_Controller::class,'index'])->middleware('Adminauth');
