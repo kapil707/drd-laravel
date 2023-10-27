@@ -11,6 +11,7 @@ class Manage_master_Controller extends Controller
     {
 		if (Auth::check()) {
             //dd("User is login.");
+			return redirect("vp-admin");
         } else {
             //dd("User is not login.");
 			return redirect("vp-admin");
