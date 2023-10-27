@@ -44,6 +44,7 @@
 		</div>
     </div>
 </div>
+<script src="https://cdn.datatables.net/scroller/2.2.0/js/dataTables.scroller.min.js"></script>
 <script>
 let data = [];
 // for (let i = 0; i < 50000; i++) {
