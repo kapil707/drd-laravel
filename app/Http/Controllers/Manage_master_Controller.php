@@ -10,9 +10,10 @@ class Manage_master_Controller extends Controller
 	public function __construct()
     {
 		if (Auth::check()) {
-            dd("User is login.");
+            //dd("User is login.");
         } else {
-            dd("User is not login.");
+            //dd("User is not login.");
+			return redirect("vp-admin");
         }
     }
 	
