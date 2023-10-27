@@ -26,8 +26,7 @@ class AdminController extends Controller
         // echo Crypt::encrypt($input['password']);
         $admin_user = Model_tbl_user::where('email',$input['username'])->get();
         if(Crypt::decrypt($admin_user[0]->password1)==$input['password']){
-            $request->session()->put('admin_user_id',$admin_user[0]->id);
-            $request->session()->put('admin_user_type',$admin_user[0]->user_type);
+            $request->session()->put('admin_user',$admin_user[0]);
             /*********************************** *
             $admin_user = Model_tbl_user::find($admin_user[0]->id);
             $admin_user->login_date = date("Y-m-d");
