@@ -9,7 +9,7 @@
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
 				<div class="table-responsive">
-					<table class="" id="examplexxxx">
+					<table class="" id="example-table">
 						<thead>
 							<tr>
 								<th>
@@ -86,7 +86,7 @@ $(document).ready(function(){
 		<?php
 	}
 	?>
-	$('#examplexxxx').DataTable({
+	$('#example-table').DataTable({
 		data: data,
 		deferRender: true,
 		scrollCollapse: true,
