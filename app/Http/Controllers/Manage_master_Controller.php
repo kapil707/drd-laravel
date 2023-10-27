@@ -9,9 +9,11 @@ class Manage_master_Controller extends Controller
 {
 	public function __construct()
     {
-        if(Auth::check()){
-			return view('dashboard');
-		}
+		if (Auth::check()) {
+            dd("User is login.");
+        } else {
+            dd("User is not login.");
+        }
     }
 	
     var $Page_title = "Manage Master";
@@ -37,12 +39,6 @@ class Manage_master_Controller extends Controller
 		$data['title2'] = "View";
 		$data['Page_name'] = $Page_name;
 		$data['Page_menu'] = $Page_menu;
-
-		if (Auth::check()) {
-            dd("User is login.");
-        } else {
-            dd("User is not login.");
-        }
 
 		if($action_type==""){
 			return redirect("vp-admin/".$page_controllers."/view");
