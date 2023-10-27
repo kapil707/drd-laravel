@@ -72,6 +72,7 @@ class Manage_medicine_Controller extends Controller
             $tbl = "tbl_tracking";
             $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
 		}
+        
 
 		if($action_type=="chemist_photo"){
         	// $where = array('page_type'=>$page_type);
