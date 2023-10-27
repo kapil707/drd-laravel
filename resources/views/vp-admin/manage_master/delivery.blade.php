@@ -79,10 +79,11 @@ function delete_rec(id)
 $(document).ready(function(){
 	let data = [];
 	<?php
+	$i = 1;
 	foreach ($result as $row)
 	{
 		?>
-		data.push(['<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>']);
+		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>']);
 		<?php
 	}
 	?>
@@ -91,7 +92,7 @@ $(document).ready(function(){
 		deferRender: true,
 		scrollCollapse: true,
 		scroller: true,
-		scrollY: 200
+		scrollY: 500
 	});
 });
 </script>
