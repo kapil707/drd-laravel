@@ -9,36 +9,17 @@
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
 				<div class="table-responsive">
-					<table class="table table-striped table-bordered table-hover" id="example">
-						<thead>
-							<tr>
-								<th>
-									Sno.
-								</th>
-								<th>
-									gstvno
-								</th>
-								<th>
-									vdt
-								</th>
-								<th>
-									deliverby
-								</th>
-								<th>
-									user_altercode
-								</th>
-								<th>
-									amt
-								</th>
-								<th>
-									Update Time
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-						
-						</tbody>
-					</table>
+				<table id="example" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>ZIP / Post code</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+    </table>
 				</div>
 			</div>
 		</div>
@@ -55,7 +36,7 @@ $(document).ready(function(){
 	for (let i = 0; i < 50000; i++) {
 		data.push([i, i, i, i, i]);
 	}
-	new DataTable('#example', {
+	DataTable('#example', {
 		data: data,
 		deferRender: true,
 		scrollCollapse: true,
