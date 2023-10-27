@@ -33,51 +33,10 @@
 								<th>
 									Update Time
 								</th>
-								<th>
-									Action
-								</th>
 							</tr>
 						</thead>
 						<tbody>
-						<?php
-						$i=1;
-						foreach ($result as $row)
-						{
-							?>
-							<tr id="row_<?= $row->id; ?>">
-								<td>
-									<?= $i++; ?>
-								</td>
-								<td>
-									<?= ($row->gstvno); ?>
-								</td>
-								<td>
-									<?= ($row->vdt); ?>
-								</td>
-								<td>
-									<?= ($row->deliverby); ?>
-								</td>
-								<td>
-									<?= ($row->user_altercode); ?>
-								</td>
-								<td>
-									<?= ($row->amt); ?>
-								</td>
-								<td>
-									<?= ($row->date);?>
-									<?= ($row->time);?>
-								</td>
-								<td class="text-right">
-									<div class="btn-group">
-										<a href="edit/<?= $row->id; ?>" class="btn-white btn btn-xs">Edit
-										</a>
-										<a href="javascript:void(0)" onclick="delete_page_rec('<?= $row->id; ?>')" class="btn-white btn btn-xs">Delete</i> </a>
-									</div>
-								</td>
-							</tr>
-							<?php
-							}
-							?>
+						
 						</tbody>
 					</table>
 				</div>
@@ -87,9 +46,17 @@
 </div>
 <script>
 let data = [];
-for (let i = 0; i < 50000; i++) {
-    data.push([i, i, i, i, i]);
+// for (let i = 0; i < 50000; i++) {
+//     data.push([i, i, i, i, i]);
+// }
+<?php
+foreach ($result as $row)
+{
+	?>
+	 data.push(['<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>']);
+	<?php
 }
+?>
  
 new DataTable('#example', {
     data: data,
