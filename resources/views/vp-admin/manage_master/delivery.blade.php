@@ -9,7 +9,7 @@
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
 				<div class="table-responsive">
-					<table class="table table-striped table-bordered table-hover" id="examplexxxx">
+					<table class="" id="examplexxxx">
 						<thead>
 							<tr>
 								<th>
