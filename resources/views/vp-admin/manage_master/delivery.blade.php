@@ -9,7 +9,7 @@
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
 				<div class="table-responsive">
-					<table class="table table-striped table-bordered table-hover dataTables-example">
+					<table class="table table-striped table-bordered table-hover" id="example">
 						<thead>
 							<tr>
 								<th>
@@ -86,6 +86,18 @@
     </div>
 </div>
 <script>
+let data = [];
+for (let i = 0; i < 50000; i++) {
+    data.push([i, i, i, i, i]);
+}
+ 
+new DataTable('#example', {
+    data: data,
+    deferRender: true,
+    scrollCollapse: true,
+    scroller: true,
+    scrollY: 200
+});
 var delete_rec1 = 0;
 function delete_rec(id)
 {
