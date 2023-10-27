@@ -19,7 +19,7 @@ class Adminlogin
         if($request->session()->has('admin_user')){
             return $next($request);
         }else{
-            return redirect('login');
+            return redirect('vp-admin');
         }
     }
 }
