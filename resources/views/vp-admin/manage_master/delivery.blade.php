@@ -9,23 +9,41 @@
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
 				<div class="table-responsive">
-				<table id="examplexxxx" class="display nowrap" style="width:100%">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>ZIP / Post code</th>
-                <th>Country</th>
-            </tr>
-        </thead>
-    </table>
+					<table class="table table-striped table-bordered table-hover" id="examplexxxx">
+						<thead>
+							<tr>
+								<th>
+									Sno.
+								</th>
+								<th>
+									gstvno
+								</th>
+								<th>
+									vdt
+								</th>
+								<th>
+									deliverby
+								</th>
+								<th>
+									user_altercode
+								</th>
+								<th>
+									amt
+								</th>
+								<th>
+									Update Time
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+						
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
     </div>
 </div>
-
 <script>
 var delete_rec1 = 0;
 function delete_rec(id)
@@ -60,13 +78,14 @@ function delete_rec(id)
 <script>
 $(document).ready(function(){
 	let data = [];
-	// for (let i = 0; i < 50000; i++) {
-	//     data.push([i, i, i, i, i]);
-	// }
-
-	for (let i = 0; i < 50000; i++) {
-		data.push([i, i, i, i, i]);
+	<?php
+	foreach ($result as $row)
+	{
+		?>
+		data.push(['<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>', '<?= ($row->gstvno); ?>']);
+		<?php
 	}
+	?>
 	$('#examplexxxx').DataTable({
 		data: data,
 		deferRender: true,
