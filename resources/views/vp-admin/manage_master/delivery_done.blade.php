@@ -100,7 +100,7 @@ $(document).ready(function(){
 	foreach ($result as $row)
 	{
 		?>
-		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->deliverby); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->date);?> <?= ($row->time);?>','<?= ($row->message); ?>','<img src="https://drdweb.co.in/<?= ($row->image1); ?>" width=100>','<img src="https://drdweb.co.in/<?= ($row->image2); ?>" width=100>','<img src="https://drdweb.co.in/<?= ($row->image3); ?>" width=100>','<img src="https://drdweb.co.in/<?= ($row->image4); ?>" width=100>']);
+		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->deliverby); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->date);?> <?= ($row->time);?>','<?= ($row->message); ?>','<a href="https://drdweb.co.in/<?= ($row->image1); ?>" target="_blank"><img src="https://drdweb.co.in/<?= ($row->image1); ?>" width=100></a>','<a href="https://drdweb.co.in/<?= ($row->image2); ?>" target="_blank"><img src="https://drdweb.co.in/<?= ($row->image2); ?>" width=100></a>','<a href="https://drdweb.co.in/<?= ($row->image3); ?>" target="_blank"><img src="https://drdweb.co.in/<?= ($row->image3); ?>" width=100></a>','<a href="https://drdweb.co.in/<?= ($row->image4); ?>" target="_blank"><img src="https://drdweb.co.in/<?= ($row->image4); ?>" width=100></a>']);
 		<?php
 	}
 	?>
