@@ -16,25 +16,40 @@
 									Sno.
 								</th>
 								<th>
-									gstvno
+									Gstvno
 								</th>
 								<th>
-									vdt
+									Vdt
 								</th>
 								<th>
-									deliverby
+									Deliverby
 								</th>
 								<th>
-									user_altercode
+									User Altercode
 								</th>
 								<th>
-									chemist_id
+									Chemist Id
 								</th>
 								<th>
-									amt
+									Amt
 								</th>
 								<th>
 									Update Time
+								</th>
+								<th>
+									Message
+								</th>
+								<th>
+									Material photo1
+								</th>
+								<th>
+									Material photo2
+								</th>
+								<th>
+									Payment Detail
+								</th>
+								<th>
+									NR ackn
 								</th>
 							</tr>
 						</thead>
@@ -85,7 +100,7 @@ $(document).ready(function(){
 	foreach ($result as $row)
 	{
 		?>
-		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->deliverby); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->date);?> <?= ($row->time);?>']);
+		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->deliverby); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->date);?> <?= ($row->time);?>','<?= ($row->message); ?>','<?= ($row->image1); ?>','<?= ($row->image2); ?>','<?= ($row->image3); ?>','<?= ($row->image4); ?>']);
 		<?php
 	}
 	?>
