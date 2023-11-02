@@ -36,21 +36,6 @@
 								<th>
 									Update Time
 								</th>
-								<th>
-									Message
-								</th>
-								<th>
-									Material photo1
-								</th>
-								<th>
-									Material photo2
-								</th>
-								<th>
-									Payment Detail
-								</th>
-								<th>
-									NR ackn
-								</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -100,7 +85,7 @@ $(document).ready(function(){
 	foreach ($result as $row)
 	{
 		?>
-		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->deliverby); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->date);?> <?= ($row->time);?>','<?= ($row->message); ?>','<?= ($row->image1); ?>','<?= ($row->image2); ?>','<?= ($row->image3); ?>','<?= ($row->image4); ?>']);
+		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->deliverby); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->date);?> <?= ($row->time);?>']);
 		<?php
 	}
 	?>
