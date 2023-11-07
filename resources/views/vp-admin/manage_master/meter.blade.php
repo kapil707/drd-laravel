@@ -52,8 +52,8 @@
 									<?= ($row->user_altercode); ?>
 								</td>
 								<td>
-									<a href="https://drdweb.co.in/upload_drd_master/meter_photo/<?= ($row->date);?>/<?= ($row->image1); ?>" target="_blank">
-									<img src="https://drdweb.co.in/upload_drd_master/meter_photo/<?= ($row->date);?>/<?= ($row->image1); ?>" width=100></a>
+									<a href="https://drdweb.co.in/upload_drd_master/meter_photo/<?= ($row->date);?>/<?= ($row->image); ?>" target="_blank">
+									<img src="https://drdweb.co.in/upload_drd_master/meter_photo/<?= ($row->date);?>/<?= ($row->image); ?>" width=100></a>
 								</td>
 								<td>
 									<?= ($row->message); ?>
