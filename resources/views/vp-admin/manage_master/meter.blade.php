@@ -55,7 +55,7 @@
 									<?= ($row->image); ?>
 								</td>
 								<td>
-									<?= ($row->meter_text); ?>
+									<?= ($row->message); ?>
 								</td>
 								<td>
 									<?= ($row->date);?>
