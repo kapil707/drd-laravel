@@ -73,6 +73,7 @@ class Manage_master_Controller extends Controller
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
             
+			
 			$where = array('status'=>1);
             $tbl = "tbl_delivery";
             $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
