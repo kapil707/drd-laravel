@@ -63,7 +63,7 @@ class Manage_master_Controller extends Controller
             
 			$where = array('status'=>0,'vdt'=>date("Y-m-d"));
 			$tbl = "tbl_delivery";
-			$data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
+			$data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('gstvno','asc')->get();
 
 			// print_r($data["result"]);
 			// die();
