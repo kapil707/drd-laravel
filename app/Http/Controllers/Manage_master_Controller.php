@@ -63,7 +63,7 @@ class Manage_master_Controller extends Controller
             
 			$where = array('status'=>0);
             $tbl = "tbl_delivery";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->get();
 		}
 
 		if($action_type=="delivery_done"){
