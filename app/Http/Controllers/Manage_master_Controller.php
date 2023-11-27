@@ -65,8 +65,8 @@ class Manage_master_Controller extends Controller
 			$tbl = "tbl_delivery";
 			$data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
 
-			print_r($data["result"]);
-			die();
+			// print_r($data["result"]);
+			// die();
 		}
 
 		if($action_type=="delivery_done"){
@@ -77,8 +77,8 @@ class Manage_master_Controller extends Controller
             $tbl = "tbl_delivery";
             $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
 
-			print_r($data["result"]);
-			die();
+			// print_r($data["result"]);
+			// die();
 		}
 
 		if($action_type=="meter"){
