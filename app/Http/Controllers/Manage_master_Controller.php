@@ -63,7 +63,7 @@ class Manage_master_Controller extends Controller
             
 			$where = array('status'=>0);
             $tbl = "tbl_delivery";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->get();
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
 		}
 
 		if($action_type=="delivery_done"){
@@ -72,7 +72,7 @@ class Manage_master_Controller extends Controller
             
 			$where = array('status'=>1);
             $tbl = "tbl_delivery";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->get();
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
 		}
 
 		if($action_type=="meter"){
@@ -80,7 +80,7 @@ class Manage_master_Controller extends Controller
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
             
             $tbl = "tbl_meter";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->orderBy('id','desc')->get();
 		}
 
 		if($action_type=="tracking"){
@@ -88,7 +88,7 @@ class Manage_master_Controller extends Controller
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
             
             $tbl = "tbl_tracking";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->orderBy('id','desc')->get();
 		}
 
 		if($action_type=="firebase_token"){
