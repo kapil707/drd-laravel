@@ -8,6 +8,19 @@
     <div class="col-xs-12">
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
+				<form method="post">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="form-group nk-datapk-ctm form-elet-mg" id="data_1">
+							<div class="input-group date nk-int-st">
+								<label>Select Date</label>
+								<input type="date" class="form-control" value="" name="date">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 text-right">
+						<button type="submit" name="submit" class="btn btn-success notika-btn-success waves-effect" value="submit">Submit</button>
+					</div>
+				</form>
 				<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover" id="example-table">
 						<thead>
