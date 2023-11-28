@@ -52,16 +52,29 @@ class Manage_master_Controller extends Controller
 		if($action_type=="attendance"){
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+
+			$mydate = date("Y-m-d");
+			if(isset($_GET["date"])){
+				$mydate = $_GET["date"];
+			}
+			$data["mydate"] = $mydate;
             
+			$where = array('date'=>$mydate);
             $tbl = "tbl_attendance";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->get();
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->get();
 		}
 
         if($action_type=="delivery"){
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+
+			$mydate = date("Y-m-d");
+			if(isset($_GET["date"])){
+				$mydate = $_GET["date"];
+			}
+			$data["mydate"] = $mydate;
             
-			$where = array('status'=>0,'vdt'=>date("Y-m-d"));
+			$where = array('status'=>0,'vdt'=>$mydate);
 			$tbl = "tbl_delivery";
 			$data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('gstvno','asc')->get();
 
@@ -90,17 +103,31 @@ class Manage_master_Controller extends Controller
 		if($action_type=="meter"){
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+
+			$mydate = date("Y-m-d");
+			if(isset($_GET["date"])){
+				$mydate = $_GET["date"];
+			}
+			$data["mydate"] = $mydate;
             
+			$where = array('date'=>$mydate);
             $tbl = "tbl_meter";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->orderBy('id','desc')->get();
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
 		}
 
 		if($action_type=="tracking"){
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+
+			$mydate = date("Y-m-d");
+			if(isset($_GET["date"])){
+				$mydate = $_GET["date"];
+			}
+			$data["mydate"] = $mydate;
             
+			$where = array('date'=>$mydate);
             $tbl = "tbl_tracking";
-            $data["result"] = \DB::connection('mysql2')->table($tbl)->orderBy('id','desc')->get();
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
 		}
 
 		if($action_type=="firebase_token"){
