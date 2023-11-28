@@ -68,6 +68,9 @@
 									Payment Type
 								</th>
 								<th>
+									Map
+								</th>
+								<th>
 									Material photo1
 								</th>
 								<th>
@@ -128,7 +131,7 @@ $(document).ready(function(){
 	foreach ($result as $row)
 	{
 		?>
-		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->deliverby); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->date);?> <?= ($row->time);?>','<?= ($row->message); ?>','<?= ($row->payment_message); ?>','<?= ($row->payment_type); ?>','<a href="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image1); ?>" target="_blank"><img src="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image1); ?>" width=100></a>','<a href="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image2); ?>" target="_blank"><img src="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image2); ?>" width=100></a>','<a href="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image3); ?>" target="_blank"><img src="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image3); ?>" width=100></a>','<a href="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image4); ?>" target="_blank"><img src="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image4); ?>" width=100></a>']);
+		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->deliverby); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->date);?> <?= ($row->time);?>','<?= ($row->message); ?>','<?= ($row->payment_message); ?>','<?= ($row->payment_type); ?>','<?= ($row->latitude); ?> <?= ($row->longitude); ?>','<a href="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image1); ?>" target="_blank"><img src="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image1); ?>" width=100></a>','<a href="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image2); ?>" target="_blank"><img src="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image2); ?>" width=100></a>','<a href="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image3); ?>" target="_blank"><img src="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image3); ?>" width=100></a>','<a href="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image4); ?>" target="_blank"><img src="https://drdweb.co.in/upload_drd_master/chemist_photo/<?= ($row->date);?>/<?= ($row->image4); ?>" width=100></a>']);
 		<?php
 	}
 	?>
