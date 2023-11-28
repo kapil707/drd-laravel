@@ -21,6 +21,12 @@
 						<button type="submit" name="submit" class="btn btn-success notika-btn-success waves-effect" value="submit">Submit</button>
 					</div>
 				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12">
+		<div class="ibox float-e-margins">
+			<div class="ibox-content">
 				<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover" id="example-table">
 						<thead>
