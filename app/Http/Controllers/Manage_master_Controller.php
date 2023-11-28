@@ -72,9 +72,14 @@ class Manage_master_Controller extends Controller
 		if($action_type=="delivery_done"){
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
-            
+			
+			$mydate = date("Y-m-d");
+			if(isset($_GET["date"])){
+				$mydate = $_GET["date"];
+			}
+			$data["mydate"] = $mydate;
 
-			$where = array('status'=>1,'date'=>date("Y-m-d"));
+			$where = array('status'=>1,'date'=>$mydate);
             $tbl = "tbl_delivery";
             $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
 
