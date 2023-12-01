@@ -167,7 +167,7 @@ class Manage_master_Controller extends Controller
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
             
             $tbl = "tbl_tracking";
-            $data["result"] = \DB::connection('mysql2')->select("select * from $tbl");
+            $data["result"] = \DB::connection('mysql2')->select("select DISTINCT user_altercode from $tbl");
 		}
 
 		return view("vp-admin/$Page_view/$action_type")->with($data);
