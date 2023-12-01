@@ -8,41 +8,7 @@
     <div class="col-xs-12">
 		<div class="ibox float-e-margins">
 			<div class="ibox-content">
-				<div class="table-responsive">
-					<table class="table table-striped table-bordered table-hover" id="example-table">
-						<thead>
-							<tr>
-								<th>
-									Sno.
-								</th>
-								<th>
-									Gstvno
-								</th>
-								<th>
-									Vdt
-								</th>
-								<th>
-									Deliverby
-								</th>
-								<th>
-									User Altercode
-								</th>
-								<th>
-									Chemist Id
-								</th>
-								<th>
-									Amt
-								</th>
-								<th>
-									Update Time
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-						
-						</tbody>
-					</table>
-				</div>
+				<div id="map"></div>
 			</div>
 		</div>
     </div>
@@ -78,7 +44,7 @@ function delete_rec(id)
 </script>
 @include('vp-admin/header_footer/footer')
 
-<div id="map"></div>
+
 <script>
 setTimeout(function(){
   initMap();
