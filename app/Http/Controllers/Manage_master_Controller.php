@@ -162,6 +162,14 @@ class Manage_master_Controller extends Controller
             $data["result"] = \DB::connection('mysql2')->table($tbl)->orderBy('id','desc')->get();
 		}
 
+		if($action_type=="master_user_map"){
+        	// $where = array('page_type'=>$page_type);
+  			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
+            
+            $tbl = "tbl_tracking";
+            $data["result"] = \DB::connection('mysql2')->table($tbl)->orderBy('id','desc')->get();
+		}
+
 		return view("vp-admin/$Page_view/$action_type")->with($data);
 	}
 
