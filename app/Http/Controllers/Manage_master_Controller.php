@@ -74,8 +74,8 @@ class Manage_master_Controller extends Controller
 			}
 			$data["mydate"] = $mydate;
             
-			$where = array('status'=>0,'vdt'=>$mydate);
-			$tbl = "tbl_delivery";
+			$where = array('vdt'=>$mydate);
+			$tbl = "drd_master_tbl_delivery";
 			$data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('gstvno','asc')->get();
 
 			// print_r($data["result"]);
