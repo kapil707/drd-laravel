@@ -107,7 +107,7 @@ $(document).ready(function(){
 	foreach ($result as $row)
 	{
 		?>
-		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_code); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amt); ?>','<?= ($row->dispatchtime);?>']);
+		data.push(['<?= $i++; ?>', '<?= ($row->gstvno); ?>', '<?= ($row->vdt); ?>', '<?= ($row->user_altercode); ?>', '<?= ($row->chemist_code); ?>', '<?= ($row->chemist_id); ?>', '<?= ($row->amount); ?>','<?= ($row->dispatchtime);?>']);
 		<?php
 	}
 	?>
