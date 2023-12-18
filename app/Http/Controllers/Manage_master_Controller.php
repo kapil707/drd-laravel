@@ -93,7 +93,7 @@ class Manage_master_Controller extends Controller
 			$data["mydate"] = $mydate;
 
 			$where = array('status'=>1,'date'=>$mydate);
-            $tbl = "tbl_delivery";
+            $tbl = "tbl_delivery_photo";
             $data["result"] = \DB::connection('mysql2')->table($tbl)->where($where)->orderBy('id','desc')->get();
 
 			// print_r($data["result"]);
