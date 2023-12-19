@@ -71,11 +71,7 @@ function initMap() {
     });
 
     var infowindow = new google.maps.InfoWindow();
-
     var marker, i;
-
-    
-
     for (i = 0; i < locations.length; i++) {
       if(i!=0)
       {  
