@@ -166,8 +166,8 @@ class Manage_master_Controller extends Controller
         	// $where = array('page_type'=>$page_type);
   			// $data["result"] = DB::connection('mysql2')->table($tbl)->where($where)->get();
             
-            $tbl = "tbl_tracking";
-            $data["result"] = \DB::connection('mysql2')->select("select DISTINCT user_altercode from $tbl");
+            //$tbl = "tbl_tracking";
+            $data["result"] = \DB::connection('mysql2')->select("select DISTINCT t0.user_altercode,(select `latitude` from tbl_tracking as t1 where t1.user_altercode=t0.user_altercode order by id desc limit 1) as latitude,(select `longitude` from tbl_tracking as t1 where t1.user_altercode=t0.user_altercode order by id desc limit 1) as longitude,(select `getdate` from tbl_tracking as t1 where t1.user_altercode=t0.user_altercode order by id desc limit 1) as getdate,(select `gettime` from tbl_tracking as t1 where t1.user_altercode=t0.user_altercode order by id desc limit 1) as gettime FROM `tbl_tracking` as t0");
 		}
 
 		return view("vp-admin/$Page_view/$action_type")->with($data);
