@@ -101,10 +101,6 @@ function initMap() {
           icon:icon2
         });
       }
-      
-      
-
-      
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
