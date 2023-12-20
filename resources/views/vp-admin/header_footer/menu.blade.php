@@ -72,7 +72,7 @@
 						<?= base64_decode($mymenu->fafa_icon); ?>
 						<?php } ?>
 						<span class="nav-label">
-							<?= $page_title;?>
+							<?= $page_title;?> xxxx
 						</span>
                     </a>
 					<?php if($mymenu->page_add=="1" || $mymenu->page_view=="1" || $mymenu->page_setting=="1"){ ?>
