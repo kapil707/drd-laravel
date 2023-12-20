@@ -58,6 +58,8 @@
 				if($page_child_page){
 					$get_child_page = "manage_".$page_child_page;
 				}
+				$page_title = str_replace("_"," ",$mymenu->page_title);
+				$page_title = ucwords($page_title);
 				?>
 				<li
 				<?php if($Page_menu==$menu_page_type && $get_child_page=="") { ?>
@@ -70,7 +72,7 @@
 						<?= base64_decode($mymenu->fafa_icon); ?>
 						<?php } ?>
 						<span class="nav-label">
-							<?= $mymenu->page_title;?>
+							<?= $page_title;?>
 						</span>
                     </a>
 					<?php if($mymenu->page_add=="1" || $mymenu->page_view=="1" || $mymenu->page_setting=="1"){ ?>
