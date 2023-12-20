@@ -72,7 +72,7 @@
 						<?= base64_decode($mymenu->fafa_icon); ?>
 						<?php } ?>
 						<span class="nav-label">
-							<?= $page_title;?> xxxx
+							<?= $page_title;?>
 						</span>
                     </a>
 					<?php if($mymenu->page_add=="1" || $mymenu->page_view=="1" || $mymenu->page_setting=="1"){ ?>
@@ -100,7 +100,10 @@
 							?>
 							<li <?php if($Page_menu=="title") { ?> class="active" <?php } ?>>
 								<a href="{{ URL('vp-admin/')}}/<?php echo $menu_url ?>/<?php echo $row ?>">
-									<?php echo $row ?>
+								<?php
+								$row = str_replace("_"," ",$row);
+								$row = ucwords($row);?>
+								<?= $row;?>
 								</a>
 							</li>
 							<?php
